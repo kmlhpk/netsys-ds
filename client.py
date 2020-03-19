@@ -35,8 +35,9 @@ def placeOrder():
 
     print("Please enter a UK postcode (our delivery drivers are magic - if you supply a valid postcode, they will work out your house number automatically!)")
     postcode = input()
-    # TODO APPEND TIME
-    request = [item, quantity, postcode]
+    date = datetime.datetime.now()
+    date = date.strftime("%Y-%m-%d")+" "+date.strftime("%H:%M:%S")
+    request = [date, item, quantity, postcode]
     # TODO MAKE THE REQUEST GO SOMEWHERE
     print(request)
     return
